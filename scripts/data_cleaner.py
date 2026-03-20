@@ -41,6 +41,13 @@ artists_df['genres'] = artists_df['genres'].apply(
     lambda x: [g.lower().strip() for g in x]
 )
 
+# Convert Review date to datetime (DD/MM/AAAA)
+reviews_df['review_date'] = pd.to_datetime(
+    reviews_df['review_date'],
+    errors='coerce'
+)
+reviews_df['review_date'] = reviews_df['review_date'].dt.strftime('%d/%m/%Y')
+
 
 # Kepp only reviews of the existing albums (9012 Reviews)
 albums = songs_df['album_name'].dropna().unique()
@@ -48,8 +55,8 @@ reviews_df = reviews_df[reviews_df['album'].isin(albums)]
 
 
 # Export the cleaned data to a csv file
-"""
+
 songs_df.to_csv("data/clean_songs.csv", index=False)
 artists_df.to_csv("data/clean_artists.csv", index=False)
 reviews_df.to_csv("data/clean_reviews.csv", index=False)
-"""
+
