@@ -11,7 +11,6 @@
 - Nuno Lages – 66091  
 - Nuno Rosado – 66104  
 - Diogo Carvalho – 66123  
-- Mário Jorge Ferro – 47909  
 
 ---
 
