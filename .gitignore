@@ -1,2 +1,3 @@
 /data
-*.json
+lut_*
+/jsons/searchable_documents.json

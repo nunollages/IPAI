@@ -1,0 +1,128 @@
+{
+  "aren't":        "are not",
+  "can't":         "cannot",
+  "couldn't":      "could not",
+  "didn't":        "did not",
+  "doesn't":       "does not",
+  "don't":         "do not",
+  "hadn't":        "had not",
+  "hasn't":        "has not",
+  "haven't":       "have not",
+  "isn't":         "is not",
+  "mustn't":       "must not",
+  "needn't":       "need not",
+  "shan't":        "shall not",
+  "shouldn't":     "should not",
+  "wasn't":        "was not",
+  "weren't":       "were not",
+  "won't":         "will not",
+  "wouldn't":      "would not",
+  "oughtn't":      "ought not",
+  "mightn't":      "might not",
+  "mayn't":        "may not",
+
+  "i'm":           "i am",
+  "i've":          "i have",
+  "i'll":          "i will",
+  "i'd":           "i would",
+
+  "you're":        "you are",
+  "you've":        "you have",
+  "you'll":        "you will",
+  "you'd":         "you would",
+
+  "he's":          "he is",
+  "he'll":         "he will",
+  "he'd":          "he would",
+
+  "she's":         "she is",
+  "she'll":        "she will",
+  "she'd":         "she would",
+
+  "it's":          "it is",
+  "it'll":         "it will",
+  "it'd":          "it would",
+
+  "we're":         "we are",
+  "we've":         "we have",
+  "we'll":         "we will",
+  "we'd":          "we would",
+
+  "they're":       "they are",
+  "they've":       "they have",
+  "they'll":       "they will",
+  "they'd":        "they would",
+
+  "who's":         "who is",
+  "who'll":        "who will",
+  "who'd":         "who would",
+  "who've":        "who have",
+
+  "what's":        "what is",
+  "what're":       "what are",
+  "what'll":       "what will",
+  "what've":       "what have",
+
+  "where's":       "where is",
+  "where'd":       "where did",
+  "where'll":      "where will",
+  "where've":      "where have",
+
+  "when's":        "when is",
+  "when'd":        "when did",
+  "when'll":       "when will",
+
+  "why's":         "why is",
+  "why'd":         "why did",
+  "why're":        "why are",
+  "why'll":        "why will",
+
+  "how's":         "how is",
+  "how'd":         "how did",
+  "how'll":        "how will",
+
+  "that's":        "that is",
+  "that'll":       "that will",
+  "that'd":        "that would",
+
+  "there's":       "there is",
+  "there're":      "there are",
+  "there'll":      "there will",
+  "there'd":       "there would",
+
+  "here's":        "here is",
+  "here'll":       "here will",
+
+  "this's":        "this is",
+  "these're":      "these are",
+  "those're":      "those are",
+
+  "let's":         "let us",
+
+  "could've":      "could have",
+  "should've":     "should have",
+  "would've":      "would have",
+  "might've":      "might have",
+  "must've":       "must have",
+  "may've":        "may have",
+
+  "couldn't've":   "could not have",
+  "shouldn't've":  "should not have",
+  "wouldn't've":   "would not have",
+  "mightn't've":   "might not have",
+  "mustn't've":    "must not have",
+
+  "ain't":         "is not",
+  "y'all":         "you all",
+  "y'all're":      "you all are",
+  "y'all've":      "you all have",
+  "gonna":         "going to",
+  "wanna":         "want to",
+  "gotta":         "got to",
+  "lemme":         "let me",
+  "gimme":         "give me",
+  "kinda":         "kind of",
+  "sorta":         "sort of",
+  "outta":         "out of",
+  "dunno":         "do not know"
+}
