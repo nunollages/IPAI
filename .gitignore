@@ -2,3 +2,6 @@
 lut_*
 /jsons/searchable_documents.json
 /jsons/measure_documents.json
+/jsons/tfidf_matrix.npz
+/jsons/tfidf_vectorizer.pkl
+/jsons/measure_matrix.npy
