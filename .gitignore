@@ -5,3 +5,4 @@ lut_*
 /jsons/tfidf_matrix.npz
 /jsons/tfidf_vectorizer.pkl
 /jsons/measure_matrix.npy
+.env
