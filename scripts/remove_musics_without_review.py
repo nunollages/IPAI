@@ -6,25 +6,31 @@ import unicodedata
 songs_df = pd.read_csv("data/songs.csv")
 reviews_df = pd.read_csv("data/pitchfork_reviews.csv", sep=";")
 
+# Remover espaços no final
 songs_df.columns = songs_df.columns.str.strip()
 reviews_df.columns = reviews_df.columns.str.strip()
 
+# Normaliza o texto para facilitar comparações
 def normalize_text(text):
     if pd.isna(text):
         return ""
     text = str(text).lower().strip()
 
+    # Remover acentos
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
 
     text = text.replace("&", " and ")
 
+    # Remover pontuação
     text = re.sub(r"[^\w\s]", " ", text)
 
+    # Remover espaços repetidos
     text = re.sub(r"\s+", " ", text).strip()
 
     return text
 
+# Converte uma lista de String de Artistas em uma lista Python
 def parse_artists(value):
     if isinstance(value, list):
         return value
@@ -57,6 +63,7 @@ reviews_match = (
 songs_df["album_norm"] = songs_df[songs_album_col].apply(normalize_text)
 songs_df[songs_artists_col] = songs_df[songs_artists_col].apply(parse_artists)
 
+# Para cada musica guarda uma entrada para cada artista pertencente à mesma
 songs_exploded = songs_df.explode(songs_artists_col).copy()
 songs_exploded["artist_norm"] = songs_exploded[songs_artists_col].apply(normalize_text)
 
@@ -68,6 +75,7 @@ reviews_match = reviews_match[
     (reviews_match["album_norm"] != "") & (reviews_match["artist_norm"] != "")
 ].copy()
 
+# Merge entre as músicas e as reviews
 matched = songs_exploded.merge(
     reviews_match,
     on=["album_norm", "artist_norm"],
@@ -76,6 +84,7 @@ matched = songs_exploded.merge(
 
 print("Linhas matched:", len(matched))
 
+# Remove duplicados gerados pelo exploded
 songs_filtered = matched.drop_duplicates(subset=songs_df.columns.tolist()).copy()
 
 songs_filtered = songs_filtered.drop(columns=["album_norm", "artist_norm"], errors="ignore")

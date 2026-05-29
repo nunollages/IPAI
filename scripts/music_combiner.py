@@ -6,16 +6,13 @@ songs_df = pd.read_csv("data/songs_with_reviewed_albums.csv")
 
 songs_df = songs_df.drop("year", axis=1)
 
-# 🧠 Guardar nome original
 songs_date_df["name_original"] = songs_date_df["name"]
 
-# Normalizar
 songs_date_df["name"] = songs_date_df["name"].str.lower().str.strip()
 songs_date_df["main_artist"] = songs_date_df["main_artist"].str.lower().str.strip()
 
 songs_df["name"] = songs_df["name"].str.lower().str.strip()
 
-# Limpar artistas
 def clean_artist(x):
     if pd.isna(x):
         return None
@@ -31,7 +28,6 @@ def clean_artist(x):
 songs_df["artist_clean"] = songs_df["artists"].apply(clean_artist)
 songs_df["artist_clean"] = songs_df["artist_clean"].str.lower().str.strip()
 
-# Merge
 merged_df = pd.merge(
     songs_date_df,
     songs_df,
@@ -40,10 +36,8 @@ merged_df = pd.merge(
     how="inner"
 )
 
-# 🔄 Restaurar nome original
 merged_df["name"] = merged_df["name_original"]
 
-# 🧹 Remover colunas que já não queres
 merged_df = merged_df.drop(columns=["main_artist", "artist_clean", "name_original"])
 
 # Guardar
